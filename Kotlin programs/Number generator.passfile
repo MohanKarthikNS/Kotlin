@@ -1,0 +1,23 @@
+fun gennum(start:Int, end:Int): List<Int>{
+    if(start<end)
+    {
+        println("All good!")
+    }
+    else {
+        println("Error")
+
+    }
+        return(start..end).toList()
+
+
+}
+fun main(){
+    var a=0
+    var b=0
+    println("Enter the start point of range\n")
+     a= readLine()?.toIntOrNull()?:1
+    println("Enter The end point of range\n")
+    b= readLine()?.toIntOrNull()?:10
+    val numrange=gennum(a,b)
+    println(numrange)
+}

@@ -1,0 +1,23 @@
+fun fizzbuzz( limit:Int) {
+
+    for (i in 1..limit) {
+        when {
+            i % 3 == 0 && i % 5 == 0 -> println("FizzBuzz")
+            i % 3 == 0 -> println("Fizz")
+            i % 5 == 0 -> println("Buzz")
+            else ->println(i)
+        }
+    }
+}
+    fun main()
+    {
+        println("Enter the limit \n")
+        var a= readLine()?.toIntOrNull() ?: 100
+        fizzbuzz(a);
+        repeat(1)
+        {
+            var a= readLine()?.toIntOrNull() ?: 100
+            fizzbuzz(a);
+        }
+
+    }
