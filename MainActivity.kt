@@ -1,0 +1,39 @@
+package com.example.app1
+
+import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
+import androidx.activity.ComponentActivity
+
+class MainActivity : ComponentActivity() {
+    private lateinit var button1:Button
+             lateinit var button2:Button
+             lateinit var resetbutton:Button
+             lateinit var textview:TextView
+
+    var num=0
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activemain)
+        button1=findViewById(R.id.button1)
+        button2=findViewById(R.id.button2)
+        resetbutton=findViewById(R.id.resetbutton)
+        textview=findViewById(R.id.textview)
+       button1.setOnClickListener {
+           num++;
+           textview.text=num.toString()
+       }
+        button2.setOnClickListener {
+            num--
+            textview.text=num.toString()
+
+        }
+        resetbutton.setOnClickListener {
+
+            num = 0
+            textview.text = num.toString()
+
+
+        }
+    }
+}
